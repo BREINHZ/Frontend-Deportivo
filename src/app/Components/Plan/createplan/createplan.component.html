@@ -1,0 +1,173 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+        <h3 class="titulo">Registro de planes deportivos</h3>
+          <form [formGroup]="planForm" (ngSubmit)="submitForm()" novalidate>
+              <div class="form-group">
+
+                  <div class="form-group">
+                    <label class="label-verde">kilocalorias</label>
+                      <input type="text" formControlName="kilocalorias" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">fibra</label>
+                      <input type="text" formControlName="fibra" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">grasa</label>
+                      <input type="text" formControlName="grasa" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">carbohidratos</label>
+                      <input type="text" formControlName="carbohidratos" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">proteina</label>
+                    <input type="text" formControlName="proteina" class="form-control">
+                </div>
+
+
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </div>
+      <tr>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/listarplanesdeportivos']">Listar planes</button>
+      </td>
+
+        <td>
+          <button type="button" class="btn btn-warning btn-sm move-right" style="background-color: #FF9900" [routerLink]="['/createmenudeportivo']">Crear menú</button>
+        </td>
+
+        <td>
+          <button type="button" class="btn btn-warning btn-sm move-right" [routerLink]="['/listarmenusdeportivos']">Listar menú</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/createdietadeportiva']">Crear dieta</button>
+      </td>
+
+    <td>
+      <button type="button" class="btn btn-warning btn-sm move-right" style="background-color: #FF9900" [routerLink]="['/listardietasdeportivas']">Listar dietas</button>
+    </td>
+  <td>
+    <button type="button" class="btn btn-warning btn-sm move-right" [routerLink]="['/createalimentodeportivo']">Crear alimento</button>
+  </td>
+
+  <td>
+    <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/listaralimentosdeportivos']">Listar alimentos</button>
+  </td>
+
+  <td>
+    <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/crearejerciciodeportivo']">Registrar Ejercicios</button>
+  </td>
+
+  <td>
+    <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/listarejeciciosdeportivos']">Listar ejercicios</button>
+  </td>
+
+  <td>
+    <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/createdietamenu']">Crear dieta menú</button>
+  </td>
+
+  <td>
+    <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/listardietasmenusdeportivos']">Listar dietas menús</button>
+  </td>
+    </tr>
+
+    <tr>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/createusuariodeportivo']">Registrar usuarios</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/listarusuariosdeportivos']">Listar usuario</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/createdietausuariodeportivo']">Crear dieta usuario</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/listarusuariosdietasdeportivos']">Listar dieta usuarios</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/createrutinausuariosdeportivos']">Crear rutina</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/listarrutinasusuariosdeportivos']">Listar rutinas</button>
+      </td>
+
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/createrutinausejerciciosdeportivos']">Crear rutina ejercicio</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/listarrutinasejerciciosdeportivos']">Listar rutinas ejercicio</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-warning btn-sm move-right" [routerLink]="['/createalimentaciondeportiva']">Crear alimentación</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/listaralimentaciondeportiva']">Listar alimentación</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/ingresousuariologin']">Ingreso de usuario</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #FFA07A" [routerLink]="['/usuariosdeportivoseliminados']">Listar usuarios eliminados</button>
+      </td>
+
+
+
+
+
+    </tr>
+
+    <tr>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #e0ff33" [routerLink]="['/createdia']">Crear día</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-warning btn-sm move-right" [routerLink]="['/listardias']">Listar días</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/creatediaalimento']">Crear día alimento</button>
+      </td>
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #ffeb7a" [routerLink]="['/listardiaalimento']">Listar días alimentos</button>
+      </td>
+
+
+      <td>
+        <button type="button" class="btn btn-sm move-right" style="background-color: #33ff68" [routerLink]="['/recuperarpasswordusuario']">Recuperar password</button>
+      </td>
+
+
+
+
+
+    </tr>
+
+  </div>
+</div>

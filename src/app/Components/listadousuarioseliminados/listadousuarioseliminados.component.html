@@ -1,0 +1,66 @@
+<div class="container wrapper">
+  <div class="row">
+      <!-- Issue table -->
+      <div class="col-md-12">
+          <div class="inner">
+
+              <h3>Listado de usuarios eliminados</h3>
+
+              <tr>
+                  <td>
+                      <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+                  </td>
+
+              </tr>
+              <table class="table table-bordered">
+                  <thead>
+
+
+                      <tr>
+
+                          <th scope="col">username</th>
+                          <th scope="col">fechacreacion</th>
+                          <th scope="col">email</th>
+                          <th scope="col">sexo</th>
+                          <th scope="col">estatura</th>
+                          <th scope="col">pesoactual</th>
+                          <th scope="col">imc</th>
+                          <th scope="col">pesodeseado</th>
+                          <th scope="col">password</th>
+                          <th scope="col">fechanacimiento</th>
+                          <th scope="col">id_plan</th>
+                          <th scope="col">Acciòn</th>
+
+
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let p of Listadoeliminados">
+
+                          <td>{{p.username}}</td>
+                          <td>{{p.fechacreacion}}</td>
+                          <td>{{p.email}}</td>
+                          <td>{{p.sexo}}</td>
+                          <td>{{p.estatura}}</td>
+                          <td>{{p.pesoactual}}</td>
+                          <td>{{p.imc}}</td>
+                          <td>{{p.pesodeseado}}</td>
+                          <td>{{p.password}}</td>
+                          <td>{{p.fechanacimiento}}</td>
+                          <td>{{p.id_plan}}</td>
+
+                          <td>
+
+                            <button type="button" class="btn btn-danger btn-sm" (click)="deleteusuariodelistaeliminados(p.id_usuario)">Remove</button>
+
+                        </td>
+
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+

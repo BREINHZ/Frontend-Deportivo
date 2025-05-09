@@ -1,0 +1,51 @@
+<div class="container wrapper">
+  <div class="row">
+      <!-- Issue table -->
+      <div class="col-md-12">
+          <div class="inner">
+
+              <h3>Listado de usuarios dietas</h3>
+
+              <tr>
+                  <td>
+                      <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+                  </td>
+
+              </tr>
+              <table class="table table-bordered">
+                  <thead>
+
+
+                      <tr>
+                          <th scope="col">Id</th>
+                          <th scope="col">Id_dieta</th>
+                          <th scope="col">id_usuario</th>
+                          <th scope="col">Acciòn</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let p of Listardietausuario">
+
+                          <td>{{p.id}}</td>
+                          <td>{{p.id_dieta}}</td>
+                          <td>{{p.id_usuario}}</td>
+
+
+                          <td>
+
+                              <button type="button" class="btn btn-danger btn-sm" (click)="deletedietausuario(p.id)">Remove</button>
+                              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/editarusuariodietadeportivo/', p.id]">Editar dieta usuario</button>
+
+                          </td>
+
+
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+

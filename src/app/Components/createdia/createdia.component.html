@@ -1,0 +1,58 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+          <h3 class="titulo">Registro de Dia</h3>
+          <tr>
+            <td>
+                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+            </td>
+
+        </tr>
+          <form [formGroup]="diaForm" (ngSubmit)="submitForm()" novalidate>
+
+            <div class="form-group">
+              <label class="label-verde">Fecha</label>
+                <input type="date" formControlName="fecha" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">kilocalorias (Dato numérico)</label>
+                <input type="number" formControlName="kilocalorias" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Fibra</label>
+                <input type="text" formControlName="fibra" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Grasa</label>
+                <input type="text" formControlName="grasa" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Proteina</label>
+                <input type="text" formControlName="proteina" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Carbohidratos</label>
+                <input type="text" formControlName="carbohidratos" class="form-control">
+            </div>
+
+                <div class="form-group">
+                  <label class="form-label">Escoja la alimentación</label>
+                  <select type="number" formControlName="id_alimentacion">
+                      <option [value]="p.id_alimentacion" *ngFor="let p of Listadoalimentacion">{{p.id_alimentacion}}</option>
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar usuario</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+

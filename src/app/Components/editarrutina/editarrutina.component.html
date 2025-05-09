@@ -1,0 +1,39 @@
+<div class="container">
+  <legend>Editar rutina</legend>
+  <form>
+
+    <div class="mb-3">
+      <label class="form-label">Nombre</label>
+      <input type="text" name="nombre" id="textName" class="form-control" [(ngModel)]="rutina.nombre">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Dificultad</label>
+      <input type="text" name="dificultad" id="textName" class="form-control" [(ngModel)]="rutina.dificultad">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Tiempo total</label>
+      <input type="number" name="tiempo_total" id="textName" class="form-control" [(ngModel)]="rutina.tiempo_total">
+    </div>
+
+
+    <div class="mb-3">
+      <label class="form-label">Tiempo descanso</label>
+      <input type="number" name="tiempo_descanso" id="textName" class="form-control" [(ngModel)]="rutina.tiempo_descanso">
+    </div>
+
+
+  <div class="form-group">
+    <label class="form-label">Id usuario</label>
+    <select type="number" name="id_usuario" id="textName" class="form-control" [(ngModel)]="rutina.id_usuario">
+        <option [value]="p.id_usuario" *ngFor="let p of Listadousuarios">{{p.id_usuario}}</option>
+    </select>
+  </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
+

@@ -1,0 +1,66 @@
+<div class="container">
+  <legend>Editar usuario</legend>
+  <form>
+
+    <div class="mb-3">
+      <label class="form-label">Usuario nombre</label>
+      <input type="text" name="username" id="textName" class="form-control" [(ngModel)]="usuario.username">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha de creación</label>
+      <input type="date" name="fechacreacion" id="textName" class="form-control" [(ngModel)]="usuario.fechacreacion">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email</label>
+      <input type="text" name="email" id="textName" class="form-control" [(ngModel)]="usuario.email">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Sexo</label>
+      <select type="text" name="sexo" id="textName" class="form-control" [(ngModel)]="usuario.sexo">
+        <option value="Masculino">Masculino</option>
+        <option value="Femenino">Femenino</option>
+        <option value="Otro">Otro</option>
+      </select>
+  </div>
+
+
+  <div class="mb-3">
+    <label class="form-label">Estatura</label>
+    <input type="number" name="estatura" id="textName" class="form-control" [(ngModel)]="usuario.estatura">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Peso actual</label>
+    <input type="number" name="pesoactual" id="textName" class="form-control" [(ngModel)]="usuario.pesoactual">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Peso deseado</label>
+    <input type="number" name="pesodeseado" id="textName" class="form-control" [(ngModel)]="usuario.pesodeseado">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Password</label>
+    <input type="password" name="password" id="textName" class="form-control" [(ngModel)]="usuario.password">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Fecha de nacimiento</label>
+    <input type="date" name="fechanacimiento" id="textName" class="form-control" [(ngModel)]="usuario.fechanacimiento">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Id plán</label>
+    <select type="number" name="id_plan" id="textName" class="form-control" [(ngModel)]="usuario.id_plan">
+        <option [value]="p.id_plan" *ngFor="let p of Listadoplan">{{p.id_plan}}</option>
+    </select>
+  </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>

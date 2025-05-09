@@ -1,0 +1,33 @@
+<div class="container">
+  <legend>Editar proyecto</legend>
+  <form>
+
+      <div class="mb-3">
+          <label class="form-label">Kilocalorías</label>
+          <input type="text" name="kilocalorias" id="textName" class="form-control" [(ngModel)]="plan.kilocalorias">
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label">Fibra</label>
+          <input type="text" name="fibra" id="textName" class="form-control" [(ngModel)]="plan.fibra">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Grasa</label>
+        <input type="text" name="grasa" id="textName" class="form-control" [(ngModel)]="plan.grasa">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Carbohidratos</label>
+        <input type="text" name="carbohidratos" id="textName" class="form-control" [(ngModel)]="plan.carbohidratos">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Proteina</label>
+        <input type="text" name="proteina" id="textName" class="form-control" [(ngModel)]="plan.proteina">
+      </div>
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/listarplanesdeportivos']">Cancel</a>
+  </form>
+</div>

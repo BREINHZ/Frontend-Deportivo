@@ -1,0 +1,46 @@
+<div class="container">
+  <legend>Editar Alimento</legend>
+  <form>
+
+      <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" name="nombre" id="textName" class="form-control" [(ngModel)]="alimento.nombre">
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label">Proteina(Ej:0.3g)</label>
+          <input type="text" name="proteina" id="textName" class="form-control" [(ngModel)]="alimento.proteina">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Grasa(Ej:0.2g)</label>
+        <input type="text" name="grasa" id="textName" class="form-control" [(ngModel)]="alimento.grasa">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Carbohidrato(Ej:25g)</label>
+        <input type="text" name="grasa" id="textName" class="form-control" [(ngModel)]="alimento.carbohidrato">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Fibra(Ej:2g)</label>
+        <input type="text" name="grasa" id="textName" class="form-control" [(ngModel)]="alimento.fibra">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Kilocalorías -> Valór Numérico</label>
+        <input type="number" name="kilocalorias" id="textName" class="form-control" [(ngModel)]="alimento.kilocalorias">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Cantidad -> Valór Numérico</label>
+        <input type="number" name="grasa" id="textName" class="form-control" [(ngModel)]="alimento.cantidad">
+      </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
+
+

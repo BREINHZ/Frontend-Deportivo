@@ -1,0 +1,35 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+        <h3 class="titulo">Registro de dieta usuario</h3>
+        <tr>
+          <td>
+              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+          </td>
+
+      </tr>
+          <form [formGroup]="dietausuarioForm" (ngSubmit)="submitForm()" novalidate>
+
+              <div class="form-group">
+                <label class="label-verde">Id dieta</label>
+                  <select type="number" formControlName="id_dieta">
+                      <option [value]="p.id_dieta" *ngFor="let p of Listadodieta">{{p.id_dieta}}-{{p.nombre}}</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label class="label-verde">Id usuario</label>
+                  <select type="number" formControlName="id_usuario">
+                      <option [value]="p.id_usuario" *ngFor="let p of Listadousuario">{{p.id_usuario}}</option>
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar dieta usuario</button>
+          </form>
+
+
+
+      </div>
+  </div>
+</div>

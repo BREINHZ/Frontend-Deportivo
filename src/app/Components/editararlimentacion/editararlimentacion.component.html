@@ -1,0 +1,22 @@
+<div class="container">
+  <legend>Editar alimentación</legend>
+  <form>
+
+  <div class="mb-3">
+    <label class="form-label">Número día</label>
+    <input type="text" name="numero_dia" id="textName" class="form-control" [(ngModel)]="alimentacion.numero_dia">
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Id usuario</label>
+    <select type="number" name="id_usuario" id="textName" class="form-control" [(ngModel)]="alimentacion.id_usuario">
+        <option [value]="p.id_usuario" *ngFor="let p of Listadousuarios">{{p.id_usuario}}</option>
+    </select>
+  </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
+

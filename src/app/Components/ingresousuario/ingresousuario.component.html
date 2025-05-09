@@ -1,0 +1,192 @@
+<div class="container">
+  <h1>Login</h1>
+  <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="usernameOrEmail">Username o Email</label>
+      <input type="text" class="form-control" id="usernameOrEmail" formControlName="usernameOrEmail">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" formControlName="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+  </form>
+  <div *ngIf="mensajeError">
+    <p style="color: red">{{ mensajeError }}</p>
+  </div>
+  <div *ngIf="datos">
+    <h2 style="color: blue">Ejercicios</h2>
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>ID YouTube</th>
+        <th>Imagen</th>
+        <th>Estiramiento</th>
+        <th>ID Ejercicio</th>
+        <th>Dificultad</th>
+      </tr>
+      <tr *ngFor="let ejercicio of datos.ejercicios">
+        <td>{{ ejercicio.nombre }}</td>
+        <td>{{ ejercicio.id_youtube }}</td>
+        <td>{{ ejercicio.imagen }}</td>
+        <td>{{ ejercicio.estiramiento }}</td>
+        <td>{{ ejercicio.id_ejercicio }}</td>
+        <td>{{ ejercicio.dificultad }}</td>
+      </tr>
+    </table>
+    <h2 style="color: blue">Planes Asociados</h2>
+    <table>
+      <tr>
+        <th>Kilocalorias</th>
+        <th>Fibra</th>
+        <th>Grasa</th>
+        <th>Carbohidratos</th>
+        <th>Proteina</th>
+        <th>ID Plan</th>
+      </tr>
+      <tr>
+        <td>{{ datos.planesAsociados.kilocalorias }}</td>
+        <td>{{ datos.planesAsociados.fibra }}</td>
+        <td>{{ datos.planesAsociados.grasa }}</td>
+        <td>{{ datos.planesAsociados.carbohidratos }}</td>
+        <td>{{ datos.planesAsociados.proteina }}</td>
+        <td>{{ datos.planesAsociados.id_plan }}</td>
+      </tr>
+    </table>
+    <h2 style="color: blue">Rutinas Asociadas</h2>
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>Tiempo Total</th>
+        <th>Tiempo Descanso</th>
+        <th>ID Usuario</th>
+        <th>Dificultad</th>
+        <th>ID Rutina</th>
+      </tr>
+      <tr *ngFor="let rutina of datos.rutinasAsociadas">
+        <td>{{ rutina.nombre }}</td>
+        <td>{{ rutina.tiempo_total }}</td>
+        <td>{{ rutina.tiempo_descanso }}</td>
+        <td>{{ rutina.id_usuario }}</td>
+        <td>{{ rutina.dificultad }}</td>
+        <td>{{ rutina.id_rutina }}</td>
+      </tr>
+    </table>
+    <h2 style="color: blue">Alimentaciones</h2>
+    <table>
+      <tr>
+        <th>Número Día</th>
+        <th>ID Alimentación</th>
+        <th>ID Usuario</th>
+      </tr>
+      <tr *ngFor="let alimentacion of datos.alimentaciones">
+        <td>{{ alimentacion.numero_dia }}</td>
+        <td>{{ alimentacion.id_alimentacion }}</td>
+        <td>{{ alimentacion.id_usuario }}</td>
+      </tr>
+    </table>
+
+    <h2 style="color: blue">Días</h2>
+<table>
+  <tr>
+    <th>Fecha</th>
+    <th>Kilocalorias</th>
+    <th>Fibra</th>
+    <th>Grasa</th>
+    <th>Carbohidratos</th>
+    <th>Proteina</th>
+    <th>ID Alimentación</th>
+    <th>ID Día</th>
+  </tr>
+  <tr *ngFor="let dia of datos.dias">
+    <td>{{ dia.fecha }}</td>
+    <td>{{ dia.kilocalorias }}</td>
+    <td>{{ dia.fibra }}</td>
+    <td>{{ dia.grasa }}</td>
+    <td>{{ dia.carbohidratos }}</td>
+    <td>{{ dia.proteina }}</td>
+    <td>{{ dia.id_alimentacion }}</td>
+    <td>{{ dia.id_dia }}</td>
+  </tr>
+</table>
+
+<h2 style="color: blue">Dieta Menus</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>ID Dieta</th>
+    <th>ID Menu</th>
+  </tr>
+  <tr *ngFor="let dietaMenu of datos.dietaMenus">
+    <td>{{ dietaMenu.id }}</td>
+    <td>{{ dietaMenu.id_dieta }}</td>
+    <td>{{ dietaMenu.id_menu }}</td>
+  </tr>
+</table>
+
+<h2 style="color: blue">Usuario</h2>
+<table>
+  <tr>
+    <th>Username</th>
+    <th>Email</th>
+    <th>Sexo</th>
+    <th>Estatura</th>
+    <th>Peso Actual</th>
+    <th>IMC</th>
+    <th>Peso Deseado</th>
+    <th>Password</th>
+    <th>Fecha de Nacimiento</th>
+    <th>ID Usuario</th>
+    <th>ID Plan</th>
+  </tr>
+  <tr>
+    <td>{{ datos.usuario.username }}</td>
+    <td>{{ datos.usuario.email }}</td>
+    <td>{{ datos.usuario.sexo }}</td>
+    <td>{{ datos.usuario.estatura }}</td>
+    <td>{{ datos.usuario.pesoactual }}</td>
+    <td>{{ datos.usuario.imc }}</td>
+    <td>{{ datos.usuario.pesodeseado }}</td>
+    <td>{{ datos.usuario.password }}</td>
+    <td>{{ datos.usuario.fechanacimiento }}</td>
+    <td>{{ datos.usuario.id_usuario }}</td>
+    <td>{{ datos.usuario.id_plan }}</td>
+  </tr>
+</table>
+
+<h2 style="color: blue">Menus</h2>
+<table>
+  <tr>
+    <th>Desayuno</th>
+    <th>Cena</th>
+    <th>Merienda</th>
+    <th>Almuerzo</th>
+    <th>ID Menu</th>
+  </tr>
+  <tr *ngFor="let menu of datos.menus">
+    <td>{{ menu.desayuno }}</td>
+    <td>{{ menu.cena }}</td>
+    <td>{{ menu.merienda }}</td>
+    <td>{{ menu.almuerzo }}</td>
+    <td>{{ menu.id_menu }}</td>
+  </tr>
+</table>
+
+<h2 style="color: blue">Dietas</h2>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Objetivo</th>
+    <th>Descripción</th>
+    <th>ID Dieta</th>
+  </tr>
+  <tr *ngFor="let dieta of datos.dietas">
+    <td>{{ dieta.nombre }}</td>
+    <td>{{ dieta.objetivo }}</td>
+    <td>{{ dieta.descripcion }}</td>
+    <td>{{ dieta.id_dieta }}</td>
+  </tr>
+</table>
+  </div>
+</div>
+

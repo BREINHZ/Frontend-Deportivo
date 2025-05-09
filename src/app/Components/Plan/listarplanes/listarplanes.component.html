@@ -1,0 +1,53 @@
+<div class="container wrapper">
+  <div class="row">
+      <!-- Issue table -->
+      <div class="col-md-12">
+          <div class="inner">
+
+              <h3>Listado de planes deportivos</h3>
+
+              <tr>
+                  <td>
+                      <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+                  </td>
+
+              </tr>
+              <table class="table table-bordered">
+                  <thead>
+
+                      <tr>
+                          <th scope="col">id_plan</th>
+                          <th scope="col">kilocalorias</th>
+                          <th scope="col">fibra</th>
+                          <th scope="col">grasa</th>
+                          <th scope="col">carbohidratos</th>
+                          <th scope="col">proteina</th>
+                          <th scope="col">Acciòn</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let p of Listarplanes">
+
+                          <td>{{p.id_plan}}</td>
+                          <td>{{p.kilocalorias}}</td>
+                          <td>{{p.fibra}}</td>
+                          <td>{{p.grasa}}</td>
+                          <td>{{p.carbohidratos}}</td>
+                          <td>{{p.proteina}}</td>
+
+                          <td>
+
+                              <button type="button" class="btn btn-danger btn-sm" (click)="deleteplan(p.id_plan)">Remove</button>
+                              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/editarplan/', p.id_plan]">Editar plan</button>
+
+                          </td>
+
+
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>

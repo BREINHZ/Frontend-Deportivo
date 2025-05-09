@@ -1,0 +1,76 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+          <h3 class="titulo">Registro de usuarios</h3>
+          <tr>
+            <td>
+                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+            </td>
+
+        </tr>
+          <form [formGroup]="usuarioForm" (ngSubmit)="submitForm()" novalidate>
+
+            <div class="form-group">
+              <label class="label-verde">Username</label>
+                <input type="text" formControlName="username" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Fecha de creación</label>
+                <input type="date" formControlName="fechacreacion" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Email</label>
+                <input type="text" formControlName="email" class="form-control">
+            </div>
+
+            <div class="form-group">
+                    <label class="form-label">Sexo</label>
+                    <select type="text" formControlName="sexo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                  <label class="label-verde">Estatura</label>
+                    <input type="number" formControlName="estatura" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label class="label-verde">Peso actual</label>
+                    <input type="number" formControlName="pesoactual" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label class="label-verde">Peso deseado</label>
+                    <input type="number" formControlName="pesodeseado" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label class="label-verde">Password</label>
+                    <input type="password" formControlName="password" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label class="label-verde">Fecha de nacimiento</label>
+                    <input type="date" formControlName="fechanacimiento" class="form-control">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label">Escoja el plán</label>
+                  <select type="number" formControlName="id_plan">
+                      <option [value]="p.id_plan" *ngFor="let p of Listadoplan">{{p.id_plan}}</option>
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar usuario</button>
+          </form>
+
+      </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+        <h3 class="titulo">Registro de alimentos</h3>
+        <tr>
+          <td>
+              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+          </td>
+
+      </tr>
+          <form [formGroup]="alimentoForm" (ngSubmit)="submitForm()" novalidate>
+              <div class="form-group">
+
+                  <div class="form-group">
+                    <label class="label-verde">Nombre del alimento</label>
+                      <input type="text" formControlName="nombre" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Proteina(Ej:0.3g)</label>
+                      <input type="text" formControlName="proteina" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Grasa(Ej:0.2g)</label>
+                      <input type="text" formControlName="grasa" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Carbohidrato(Ej:25g)</label>
+                      <input type="text" formControlName="carbohidrato" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Fibra(Ej:2g)</label>
+                      <input type="text" formControlName="fibra" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Kilocalorías -> Valór Numérico</label>
+                      <input type="number" formControlName="kilocalorias" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Cantidad -> Valór Numérico</label>
+                      <input type="number" formControlName="cantidad" class="form-control">
+                  </div>
+
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+
+

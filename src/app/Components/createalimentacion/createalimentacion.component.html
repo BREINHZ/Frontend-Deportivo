@@ -1,0 +1,33 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+          <h3 class="titulo">Registro de alimentación</h3>
+          <tr>
+            <td>
+                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+            </td>
+
+        </tr>
+          <form [formGroup]="alimentacionForm" (ngSubmit)="submitForm()" novalidate>
+
+            <div class="form-group">
+              <label class="form-label">Escoja el usuario</label>
+              <select type="number" formControlName="id_usuario">
+                  <option [value]="p.id_usuario" *ngFor="let p of Listadousuarios">{{p.id_usuario}}-{{p.username}}</option>
+              </select>
+          </div>
+
+            <div class="form-group">
+              <label class="label-verde">Número día</label>
+                <input type="text" formControlName="numero_dia" class="form-control">
+            </div>
+
+              <button type="submit" class="btn btn-primary">Registrar alimentación</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+

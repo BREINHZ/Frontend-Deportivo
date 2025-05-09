@@ -1,0 +1,36 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+        <h3 class="titulo">Registro de día alimento</h3>
+        <tr>
+          <td>
+              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+          </td>
+
+      </tr>
+          <form [formGroup]="diaalimentoForm" (ngSubmit)="submitForm()" novalidate>
+
+              <div class="form-group">
+                <label class="label-verde">Escoja el día</label>
+                  <select type="number" formControlName="id_dia">
+                      <option [value]="p.id_dia" *ngFor="let p of Listadodia">{{p.id_dia}}</option>
+                  </select>
+              </div>
+
+              <div class="form-group">
+                  <label class="label-verde">Escoja el alimento</label>
+                  <select type="number" formControlName="id_alimento">
+                      <option [value]="p.id_alimento" *ngFor="let p of Listadoalimento">{{p.id_alimento}}-{{p.nombre}}</option>
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar día alimento</button>
+          </form>
+
+
+
+      </div>
+  </div>
+</div>
+

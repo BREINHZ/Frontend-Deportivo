@@ -1,0 +1,57 @@
+<div class="container wrapper">
+  <div class="row">
+      <!-- Issue table -->
+      <div class="col-md-12">
+          <div class="inner">
+
+              <h3>Listado de rutinas</h3>
+
+              <tr>
+                  <td>
+                      <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+                  </td>
+
+              </tr>
+              <table class="table table-bordered">
+                  <thead>
+
+                      <tr>
+                          <th scope="col">id_rutina</th>
+                          <th scope="col">nombre</th>
+                          <th scope="col">tiempo_total</th>
+                          <th scope="col">tiempo_descanso</th>
+                          <th scope="col">dificultad</th>
+                          <th scope="col">id_usuario</th>
+
+                          <th scope="col">Acciòn</th>
+
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let p of Listarrutinas">
+
+                          <td>{{p.id_rutina}}</td>
+                          <td>{{p.nombre}}</td>
+                          <td>{{p.tiempo_total}}</td>
+                          <td>{{p.tiempo_descanso}}</td>
+                          <td>{{p.dificultad}}</td>
+                          <td>{{p.id_usuario}}</td>
+
+
+                          <td>
+
+                              <button type="button" class="btn btn-danger btn-sm" (click)="deleterutina(p.id_rutina)">Remove</button>
+                              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/editarrutinadeportiva/', p.id_rutina]">Editar rutina</button>
+
+                          </td>
+
+
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+</div>
+
+

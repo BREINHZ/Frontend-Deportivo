@@ -1,0 +1,47 @@
+<div class="container">
+  <legend>Editar día</legend>
+  <form>
+
+    <div class="mb-3">
+      <label class="form-label">Fecha</label>
+      <input type="date" name="fecha" id="textName" class="form-control" [(ngModel)]="dia.fecha">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">kilocalorias</label>
+      <input type="number" name="kilocalorias" id="textName" class="form-control" [(ngModel)]="dia.kilocalorias">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">fibra</label>
+      <input type="text" name="fibra" id="textName" class="form-control" [(ngModel)]="dia.fibra">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">grasa</label>
+      <input type="text" name="grasa" id="textName" class="form-control" [(ngModel)]="dia.grasa">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">carbohidratos</label>
+      <input type="text" name="carbohidratos" id="textName" class="form-control" [(ngModel)]="dia.carbohidratos">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">proteina</label>
+      <input type="text" name="proteina" id="textName" class="form-control" [(ngModel)]="dia.proteina">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Alimentación</label>
+      <select type="number" name="id_alimentacion" id="textName" class="form-control" [(ngModel)]="dia.id_alimentacion">
+          <option [value]="p.id_alimentacion" *ngFor="let p of Listadoalimentacion">{{p.id_alimentacion}}</option>
+      </select>
+    </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
+

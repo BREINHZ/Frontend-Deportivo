@@ -1,0 +1,23 @@
+<div class="container">
+  <legend>Editar día alimento</legend>
+  <form>
+
+      <div class="form-group">
+          <label class="form-label">Escoja el alimento</label>
+          <select type="number" name="id_alimento" id="textName" class="form-control" [(ngModel)]="dia_alimento.id_alimento">
+              <option [value]="p.id_alimento" *ngFor="let p of Listadoalimentos">{{p.id_alimento}}-{{p.nombre}}</option>
+          </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Escoja el día</label>
+        <select type="number" name="id_dia" id="textName" class="form-control" [(ngModel)]="dia_alimento.id_dia">
+            <option [value]="p.id_dia" *ngFor="let p of Listadodias">{{p.id_dia}}</option>
+        </select>
+    </div>
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
+

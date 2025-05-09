@@ -1,0 +1,24 @@
+<div class="container">
+  <legend>Editar dieta</legend>
+  <form>
+
+      <div class="mb-3">
+          <label class="form-label">Nombre</label>
+          <input type="text" name="nombre" id="textName" class="form-control" [(ngModel)]="dieta.nombre">
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label">Objetivo</label>
+          <input type="text" name="objetivo" id="textName" class="form-control" [(ngModel)]="dieta.objetivo">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <input type="text" name="descripcion" id="textName" class="form-control" [(ngModel)]="dieta.descripcion">
+      </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>

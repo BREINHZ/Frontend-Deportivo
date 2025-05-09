@@ -1,0 +1,39 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+        <h3 class="titulo">Registro de dietas deportivas</h3>
+        <tr>
+          <td>
+              <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+          </td>
+
+      </tr>
+          <form [formGroup]="dietaForm" (ngSubmit)="submitForm()" novalidate>
+              <div class="form-group">
+
+                  <div class="form-group">
+                    <label class="label-verde">Nombre</label>
+                      <input type="text" formControlName="nombre" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Objetivo</label>
+                      <input type="text" formControlName="objetivo" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="label-verde">Descripción</label>
+                      <input type="text" formControlName="descripcion" class="form-control">
+                  </div>
+
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+
+

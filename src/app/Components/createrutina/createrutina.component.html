@@ -1,0 +1,48 @@
+<div class="container wrapper wrapper2">
+  <div class="row">
+      <!-- Form -->
+      <div class="col-md-12">
+
+          <h3 class="titulo">Registro de rutinas</h3>
+          <tr>
+            <td>
+                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/createplandeportivo']">Volver a inicio</button>
+            </td>
+
+        </tr>
+          <form [formGroup]="rutinaForm" (ngSubmit)="submitForm()" novalidate>
+
+            <div class="form-group">
+              <label class="label-verde">Nombre rutina</label>
+                <input type="text" formControlName="nombre" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Tiempo total</label>
+                <input type="number" formControlName="tiempo_total" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Tiempo descanso</label>
+                <input type="number" formControlName="tiempo_descanso" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label class="label-verde">Dificultad</label>
+                <input type="text" formControlName="dificultad" class="form-control">
+            </div>
+
+                <div class="form-group">
+                  <label class="form-label">Escoja el usuario</label>
+                  <select type="number" formControlName="id_usuario">
+                      <option [value]="p.id_usuario" *ngFor="let p of Listadousuarios">{{p.id_usuario}}-{{p.username}}</option>
+                  </select>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Registrar rutina</button>
+          </form>
+
+      </div>
+  </div>
+</div>
+

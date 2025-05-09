@@ -1,0 +1,29 @@
+<div class="container">
+  <legend>Editar menú deportivo</legend>
+  <form>
+
+      <div class="mb-3">
+          <label class="form-label">Desayuno</label>
+          <input type="text" name="desayuno" id="textName" class="form-control" [(ngModel)]="menu.desayuno">
+      </div>
+
+      <div class="mb-3">
+          <label class="form-label">Cena</label>
+          <input type="text" name="cena" id="textName" class="form-control" [(ngModel)]="menu.cena">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Merienda</label>
+        <input type="text" name="merienda" id="textName" class="form-control" [(ngModel)]="menu.merienda">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Almuerzo</label>
+        <input type="text" name="almuerzo" id="textName" class="form-control" [(ngModel)]="menu.almuerzo">
+      </div>
+
+
+      <button type="button" (click)="update()" class="btn btn-primary">Update</button>
+      <a class="btn btn-primary" [routerLink]="['/createplandeportivo']">Cancel</a>
+  </form>
+</div>
