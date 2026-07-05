@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
-import { OlvidoPassword } from '../Modelo/OlvidoPassword';
+import { OlvidoPassword } from '../Modelo/olvidopassword';
 import { environment } from '../environments/environment';
 
 @Injectable({
